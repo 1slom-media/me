@@ -1,0 +1,55 @@
+.services{
+    padding: 100px;
+    
+    &_content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    &_text{
+        width: 80%;
+    }
+
+    .card{
+        background-color: #ffffff;
+        width: 300px;
+        margin: 10px;
+        padding: 25px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0 5px 25px #01010126;
+        border-radius: 10px;
+    }
+
+    &_icon{
+        color: crimson;
+        font-size: 110px;
+        text-align: center;
+        transition: transform .5s ease;
+
+        &:hover{
+            transform: translateY(-10px);
+        }
+    }
+
+    &_info{
+        text-align: center;
+    }
+
+    &_heading{
+        color: crimson;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 10px;
+    }
+}
+
+@media screen  and (max-width:1049px){
+    .services{
+        padding: 80px 20px;
+    }
+}

@@ -1,0 +1,121 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    background-color: rgba(255,255,255,.1);
+    
+    
+    .brand{
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 32px;
+        color: #ffffff;
+    }
+    
+    &_navigation{
+        position: relative;
+    }
+    
+    &_link{
+        text-decoration: none;
+        font-weight: 500;
+        font-style: 17px;
+        color: #ffffff;
+        margin-left: 30px;
+        transition: .5s ease;
+        
+        &:first-child{
+            margin-left: 0;
+        }
+        
+        &:hover{
+            color:#666;
+        }
+    }
+}
+
+.sticky{
+    background-color: crimson !important;
+    padding: 10px 100px;
+}
+
+@media screen  and (max-width:1049px){
+    .header{
+        padding: 10px 20px;
+        
+        &_navigation{
+            display: none;
+        }
+
+        &_link{
+            z-index:1000;
+            color: #000;
+            font-size: 22px;
+            margin: 10px;
+            padding: 0 20px;
+            border-radius: 20px;   
+        }
+        
+        &__menu-btn{
+            position: absolute;
+            background-image: url(../images/menu.png);
+            background-repeat: no-repeat;
+            background-size: 30px;
+            background-position: center;
+            width: 40px;
+            height: 40px;
+            right: 0;
+            margin: 0 20px;
+            cursor: pointer;
+            transition: .4s ease;
+        }
+
+        &__close-btn {
+            position: absolute;
+            z-index: 999;
+            background-image: url(../images/close.png);
+            background-repeat: no-repeat;
+            background-size: 30px;
+            width: 40px;
+            height: 40px;
+            right: 0;
+            margin: 0 20px;
+            display: none;
+            background-position: center;
+            transition: .3s ease;
+            filter: invert(1);
+        }
+
+        
+        
+    }
+
+
+     .header_navigation.active {
+        z-index: 888;
+        position: fixed;
+        background: #fff;
+        top: 0;
+        right: 0;
+        width: 380px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0 5px 25px rgba(1,1,1,.15);
+        transition: .3s ease;
+    }
+    
+
+    .sticky {
+        padding: 10px 20px;
+    }
+}

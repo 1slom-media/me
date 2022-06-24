@@ -1,0 +1,110 @@
+.hero{
+    padding: 100px;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    &_wrapper{
+        max-width: 800px;
+    }
+
+    &_heading{
+        font-weight: 500;
+        font-size: 36px;
+        color: #ffffff;
+    }
+
+    &_span{
+        font-size: 60px;
+        font-weight: 600;
+    }
+
+    &_animated{
+        height: 70px;
+        overflow: hidden;
+        position: relative;
+
+        &-heading{
+            color: crimson;
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 70px;
+            letter-spacing: 1px;
+
+            &:nth-child(1){
+                animation: text-move 10s infinite ;
+            }
+        }
+    }
+
+    @keyframes text-move{
+        0%{
+            margin-top: 0;
+        }
+        25%{
+            margin-top: -70px;
+        }
+        50%{
+            margin-top: -140px;
+        }
+        75%{
+            margin-top: -70px;
+        }
+        100%{
+            margin-top: 0;
+        }
+        
+    }
+
+    &_link{
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-radius: 2px;
+        color: #ffffff;
+        background-color: crimson;
+        font-size: 17px;
+        font-weight: 600;
+        display: inline-block;
+        padding: 10px 20px;
+        transition: .5s ease;
+
+        &:hover{
+            color: crimson;
+            background-color: #ffffff;
+        }
+    }
+
+    &_socials{
+        color: #ffffff;
+        font-size: 25px;
+        margin-right: 30px;
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen  and (max-width:1049px){
+    .hero{
+        padding: 80px 20px;
+
+        &_heading{
+            font-size: 25px;
+        }
+
+        &_animated-heading{
+            font-size: 35px;
+        }
+    }
+}

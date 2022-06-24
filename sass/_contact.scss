@@ -1,0 +1,123 @@
+.contact{
+    padding: 100px;
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__card{
+        background-color: #fff;
+        width: 240px;
+        margin: 20px;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        box-shadow: 0 5px 25px rgba(1 ,1 ,1 ,.15);
+       
+        &:hover .contact__icon{
+            transform: translateY(-10px);
+        }
+    }
+
+    &__icon{
+        color: crimson;
+        font-size: 60px;
+        text-align: center;
+        transition: transform .5s ease;
+
+    }
+
+    &__info{
+
+        &-heading{
+            color: #111;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 10px;
+        }
+
+        &-span{
+            color: #666;
+            font-weight: 500;    
+        }
+    }
+
+    &__form{
+        max-width: 600px;
+        margin-top: 50px;
+        padding: 50px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 25px rgba(1 ,1 ,1 ,.15);
+
+        &-heading{
+            color: #111;
+            font-size: 25px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    }
+
+    .input__box{
+        position: relative;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .input__box input,textarea{
+        width: 100%;
+        color: #111;
+        padding: 10px;
+        font-weight: 400;
+        font-size: 17px;
+        outline: none;
+        border-radius: 5px;
+        resize: none;
+        border: 1px solid #111;
+    }
+
+    .send__btn{
+        background-color: crimson;
+        color: #fff;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 19px;
+        font-weight: 500;
+        border:1px solid transparent;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        width: 100%;
+        padding: 10px 0;
+        border-radius: 5px;
+
+        &:hover{
+            background: #fff;
+            color: #000;
+            border: 1px solid #111;
+        }
+    }
+}
+
+@media screen  and (max-width:1049px){
+    .contact{
+        padding: 80px 20px;
+
+        &__form{
+            padding: 35px 40px;
+        }
+    }
+}

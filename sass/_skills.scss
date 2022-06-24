@@ -1,0 +1,83 @@
+.skills{
+    padding: 100px;
+    background-color: #000016;
+
+    
+    &_heading{
+        color: #ffffff;
+        font-size: 26px;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+
+    &_text{
+        font-size: 17px;
+        color: #ffffff;
+    }
+
+    &_bar{
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    &_info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5px;
+
+        &-span{
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 18px;
+        }
+    }
+
+    &_line{
+        position: relative;
+        width: 100%;
+        height: 15px;
+        background-color: #cccccc;
+        border-radius: 2px;
+
+        &::before{
+            content: "";
+            position: absolute;
+            border-radius: 2px;
+            height: 100%;
+        }
+
+    }
+
+}
+
+.html::before{
+    width: 95%;
+    background-color: #e45126;
+}
+.css::before{
+    width: 90%;
+    background-color: #0c73b8;
+}
+.sass::before{
+    width: 80%;
+    background-color: #d0136b;
+}
+.bootstrap::before{
+    width: 75%;
+    background-color: #6d7eb8;
+}
+.javascript::before{
+    width: 60%;
+    background-color: #e3a324;
+}
+
+@media screen  and (max-width:1049px){
+    .skills{
+        padding: 80px 20px;
+    }
+
+    .skills .col-right {
+        margin-top: 40px;
+      }
+}
